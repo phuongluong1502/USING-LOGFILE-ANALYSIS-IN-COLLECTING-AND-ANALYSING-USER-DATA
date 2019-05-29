@@ -1,0 +1,11 @@
+﻿RewriteEngine on
+RewriteRule ^songdep/$ index.php?p=cat$idTL=12	[L]
+RewriteRule ^news/(.*)\.html/$ index.php?p=detail&TieuDe_KhongDau=$1
+RewriteRule ^cat/(.*)/(.*)/$  index.php?p=cat&Ten_KhongDau=$1&pageNum=$2 [L]
+RewriteRule ^cat/(.*)/$  index.php?p=cat&Ten_KhongDau=$1&pageNum=1  [L]
+RewriteRule ^search/(.*)/(.*)/$ index.php?p=search&tukhoa=$1&pageNum=$2 [L]
+RewriteRule ^search/(.*)/$  index.php?p=search&tukhoa=$1&pageNum=1  [L]
+RewriteRule ^dang-ky/$  index.php?p=dangky [L]	
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+Options -Indexes
